@@ -6182,7 +6182,7 @@ svg .t-muted{fill:var(--muted)} svg .t-math{font-family:"Times New Roman",Times,
   <header class="mod-head">
     <p class="eyebrow">Module 12 · Practice exam · about 50 min</p>
     <h2>A full practice exam, then the answers</h2>
-    <p class="lede">Twenty-one questions, 100 points, every bullet of the study guide. A little more than half the points are conceptual, matching what the instructor said to expect.</p>
+    <p class="lede">Twenty-four questions, 100 points, every bullet of the study guide, including all nine textbook problems from the instructor's practice handout. A little more than half the points are conceptual, matching what the instructor said to expect.</p>
   </header>
 
   <div class="idea"><p class="label">Exam conditions</p>
@@ -6190,13 +6190,14 @@ svg .t-muted{fill:var(--muted)} svg .t-math{font-family:"Times New Roman",Times,
   </div>
 
   <div class="note"><p class="label">Where these questions come from</p>
-    <p>The instructor's Exam 2 "practice questions" handout is a list of pointers to textbook exercises. It contains no past exam questions, so every question below is original. They copy the style of HW5 to HW7, which the instructor said are similar to exam questions, and follow the handout's hints: KS questions look like the homework, Barnard's test is the 2×2 test with one margin fixed, ARL questions are qualitative, and the exam needs no "reversed" q table.</p>
+    <p><b>Nine questions are the textbook problems your instructor's practice handout points to</b>, from the free MPSI book (mpsibook.github.io). Each one carries a grey MPSI tag with the handout's number. Those numbers match the book's solutions page. The book's online exercise list counts differently, so there Ch. 1 #45 to #48 appear as #46 to #49, and Ch. 3 #32, #33, #35, #42 appear as #39, #40, #42, #49.</p>
+    <p><b>The other fifteen are original</b>, in the style of HW5 to HW7. The handout also points to Navidi's textbook (sections 6.7 to 6.9 and chapter 10). That book isn't free online, so the t-test, Mann-Whitney and quality-control questions here are original ones built on the same hints.</p>
+    <p><b>Two book problems "reverse the tables"</b> (Q3 and Q16): their data get smaller as the parameter grows. The handout says no reversing will be needed on the actual exam, but the solutions show how it works.</p>
   </div>
 
   <div class="tools"><button class="btn" type="button" data-expand="open">Show all solutions</button><button class="btn" type="button" data-expand="close">Hide all solutions</button></div>
 
-  <h3>Part A · Hypothesis testing (22 pts)</h3>
-
+  <h3>Part A · Hypothesis testing (21 pts)</h3>
   <div class="exam-q"><span class="pts">6 pts</span>
     <p><b>Q1.</b> Write a one-sentence definition of each: (a) the p-value; (b) the level of a test, \(\alpha\) (the Type I error rate); (c) the power of a test.</p>
     <details><summary>Solution</summary><div class="sol">
@@ -6210,22 +6211,8 @@ svg .t-muted{fill:var(--muted)} svg .t-math{font-family:"Times New Roman",Times,
     </div></details>
   </div>
 
-  <div class="exam-q"><span class="pts">3 pts</span>
-    <p><b>Q2.</b> An engineer tests \(H_0: \mu = 50\) MPa against \(H_a: \mu &gt; 50\) MPa for the mean yield strength of a new alloy, at \(\alpha = 0.05\).</p>
-    <p>(a) The p-value is 0.031. State the conclusion in one sentence, in context.</p>
-    <p>(b) On a second batch a teammate gets p = 0.21 and writes: "We accept \(H_0\), so the mean strength is proven to be 50 MPa." Rewrite the sentence correctly.</p>
-    <details><summary>Solution</summary><div class="sol">
-      <ol class="steps">
-        <li><b>(a)</b> Since \(p = 0.031 &lt; \alpha = 0.05\), we <span class="rj">reject \(H_0\)</span> and conclude there is evidence that the mean yield strength is greater than 50 MPa.</li>
-        <li><b>(b)</b> Since \(p = 0.21 \ge 0.05\), we <span class="okc">fail to reject \(H_0\)</span> and conclude that a mean strength of 50 MPa is plausible. The only two conclusions are "reject" and "fail to reject". A test never "accepts" \(H_0\) and never proves anything.</li>
-      </ol>
-      <p class="answer">Grading: (a) 1 pt; (b) 2 pts (1 for "fail to reject", 1 for removing "proven").</p>
-      <p>Review: <a href="#m3">Module 3</a></p>
-    </div></details>
-  </div>
-
   <div class="exam-q"><span class="pts">4 pts</span>
-    <p><b>Q3.</b> You run an upper-tailed test of \(H_0: \mu = \mu_0\) against \(H_a: \mu &gt; \mu_0\) on normal data with known \(\sigma\), using the statistic \(\overline X\) at a fixed level \(\alpha\). For a fixed alternative \(\mu' &gt; \mu_0\), does the power increase, decrease, or stay the same when:</p>
+    <p><b>Q2.</b> You run an upper-tailed test of \(H_0: \mu = \mu_0\) against \(H_a: \mu &gt; \mu_0\) on normal data with known \(\sigma\), using the statistic \(\overline X\) at a fixed level \(\alpha\). For a fixed alternative \(\mu' &gt; \mu_0\), does the power increase, decrease, or stay the same when:</p>
     <p>(a) the sample size goes from \(n = 25\) to \(n = 100\)? (b) \(\mu'\) moves farther above \(\mu_0\)? (c) \(\sigma\) doubles? (d) What is the power if the true mean equals \(\mu_0\)?</p>
     <details><summary>Solution</summary><div class="sol">
       <ol class="steps">
@@ -6239,34 +6226,59 @@ svg .t-muted{fill:var(--muted)} svg .t-math{font-family:"Times New Roman",Times,
     </div></details>
   </div>
 
-  <div class="exam-q"><span class="pts">9 pts</span>
-    <p><b>Q4.</b> The lifetime \(X\) (in thousands of hours) of a pump seal is exponential with c.d.f. \(F_X(x;\theta) = 1 - e^{-x/\theta}\) for \(x \ge 0\). You test ONE seal and observe \(x_{\rm obs} = 7\). Test \(H_0: \theta = 2\) against \(H_a: \theta &gt; 2\) at \(\alpha = 0.05\).</p>
-    <p>(a) [3] Compute the p-value and state your conclusion.</p>
-    <p>(b) [2] Suppose the test had been planned as two-tailed (\(H_a: \theta \ne 2\)) before collecting data. What would the p-value and conclusion be?</p>
-    <p>(c) [2] Find the rejection-region boundary \(y_{\rm RR}\) for the upper-tailed test.</p>
-    <p>(d) [2] Find the power of the upper-tailed test if the true value is \(\theta = 6\). What is \(\beta\) there?</p>
+  <div class="exam-q"><span class="pts">5 pts</span>
+    <p class="sheetref">MPSI Ch. 2 · Exercise 38 · from the practice handout</p>
+    <p><b>Q3.</b> You sample a single datum from the p.d.f. \(f_X(x) = a/x^{a+1}\), where \(a &gt; 1\) and \(x \ge 1\). You are given \(\mathbb{E}[X] = a/(a-1)\) and \(F_X(x;a) = 1 - (1/x)^a\). Test \(H_0: a = a_0 = 2\) against \(H_a: a &gt; a_0\) at \(\alpha = 0.05\). You observe \(x_{\rm obs} = 5/4\).</p>
+    <p>(a) [2] Write an expression for the p-value and evaluate it by hand. (b) [1] Reject or fail to reject? (c) [1] Find the rejection-region boundary. (d) [1] Find the power of the test if \(a = 4\).</p>
     <details><summary>Solution</summary><div class="sol">
       <ol class="steps">
-        <li><b>(a)</b> One datum, so \(Y = X\) and \(y_{\rm obs} = 7\). Upper-tailed row of the p-value table:
-          \(p = 1 - F_Y(7; 2) = 1 - (1 - e^{-7/2}) = e^{-3.5} = 0.0302\).
-          Since \(0.0302 &lt; 0.05\), we reject \(H_0\) and conclude there is evidence that the mean seal lifetime exceeds 2 thousand hours.</li>
-        <li><b>(b)</b> Two-tailed row: \(F_Y(7;2) = 0.9698\) and \(1 - F_Y(7;2) = 0.0302\).
-          \(p = 2 \times \min(0.9698, 0.0302) = 0.0604\). Since \(0.0604 &gt; 0.05\), we fail to reject \(H_0\); \(\theta = 2\) is plausible.
-          Same data, different conclusion: two-tailed tests are more conservative. You cannot switch tails after seeing the p-value (that is p-hacking).</li>
-        <li><b>(c)</b> Upper-tailed: \(y_{\rm RR} = F_Y^{-1}(1 - \alpha;\theta_0)\). Solve \(1 - e^{-y/2} = 0.95\):
-          \(e^{-y/2} = 0.05\), so \(y_{\rm RR} = -2\ln(0.05) = 2\ln 20 = 5.99\). Reject if \(x \ge 5.99\). Check: \(7 &gt; 5.99\), which agrees with (a).</li>
-        <li><b>(d)</b> Power \(= 1 - F_Y(y_{\rm RR};\theta) = e^{-5.99/6} = e^{-0.9986} = 0.368\). (Exactly, \(0.05^{2/6} = 0.05^{1/3}\).)
-          \(\beta = 1 - 0.368 = 0.632\). If the true mean lifetime is 6, a one-seal test rejects \(H_0\) only about 37% of the time.</li>
+        <li><b>Identify.</b> One datum, so \(Y = X\) and \(y_{\rm obs} = 5/4\). The c.d.f. of the datum is the c.d.f. of the statistic.</li>
+        <li><b>Direction check (the twist).</b> \(\mathbb{E}[X] = a/(a-1)\) gets <b>smaller</b> as \(a\) grows (\(a = 2\) gives 2, \(a = 4\) gives 1.33). So evidence for "\(a\) is big" is a <b>small</b> datum. \(H_a: a &gt; 2\) is upper-tailed in \(a\) but lower-tailed in the data, and you use the lower-tail rows of the tables. This is the "reverse the tables" case from the handout. It will not be needed on the exam; see <a href="#m5">Module 5</a>, section 4.</li>
+        <li><b>(a) p-value.</b> Lower-tail row: \(p = F_Y(y_{\rm obs}; a_0) = 1 - (4/5)^2 = 1 - 16/25 = 9/25 = 0.36\).</li>
+        <li><b>(b)</b> Since \(0.36 &gt; 0.05\), we <span class="okc">fail to reject \(H_0\)</span>: \(a = 2\) is plausible.</li>
+        <li><b>(c) Boundary.</b> Lower-tail row: \(y_{\rm RR} = F_Y^{-1}(\alpha; a_0)\). Solve \(1 - (1/y)^2 = 0.05\): \((1/y)^2 = 0.95\), so \(1/y = \sqrt{0.95}\) and \(y_{\rm RR} = 1/\sqrt{0.95} = 1.026\). Reject if \(x_{\rm obs} \le 1.026\). Check: \(1.25 &gt; 1.026\), which agrees with (b).</li>
+        <li><b>(d) Power at \(a = 4\).</b> The probability of landing in the rejection region when \(a = 4\): \(F_Y(y_{\rm RR}; 4) = 1 - (1/y_{\rm RR})^4 = 1 - (\sqrt{0.95})^4 = 1 - 0.95^2 = 0.0975\). One datum gives a very weak test.</li>
       </ol>
-      <p class="answer">(a) p = 0.0302, reject. (b) p = 0.0604, fail to reject. (c) \(y_{\rm RR} = 5.99\). (d) power 0.368, \(\beta = 0.632\).</p>
+      <p class="answer">(a) \(p = 0.36\). (b) Fail to reject. (c) \(y_{\rm RR} = 1/\sqrt{0.95} = 1.026\). (d) Power \(= 1 - 0.95^2 = 0.0975\).</p>
+      <p>Review: <a href="#m4">Module 4</a></p>
+    </div></details>
+  </div>
+
+  <div class="exam-q"><span class="pts">3 pts</span>
+    <p class="sheetref">MPSI Ch. 1 · Exercise 46 · from the practice handout</p>
+    <p><b>Q4.</b> A logistic distribution has c.d.f. \(F_X(x) = \dfrac{1}{1 + e^{-(x-\mu)}}\) for all real \(x\) and \(\mu\), and \(\mathbb{E}[X] = \mu\). You draw a single datum and let \(Y = X\).</p>
+    <p>(a) [1] Find the rejection-region boundary for a lower-tail test of \(H_0: \mu = \mu_0 = 0\) at \(\alpha = 0.05\). (b) [1] If \(y_{\rm obs} &gt; y_{\rm RR}\), do you reject or fail to reject? (c) [1] For a two-tail test at the same \(\alpha\), is the lower boundary farther from \(\mu_0\) or closer?</p>
+    <details><summary>Solution</summary><div class="sol">
+      <ol class="steps">
+        <li><b>Direction.</b> \(\mathbb{E}[Y] = \mu\) increases with \(\mu\), so the tables apply as printed. Lower-tail row: \(y_{\rm RR} = F_Y^{-1}(\alpha; \mu_0)\).</li>
+        <li><b>(a)</b> Solve \(\dfrac{1}{1 + e^{-y}} = 0.05\): \(1 + e^{-y} = 20\), so \(e^{-y} = 19\) and \(y_{\rm RR} = -\ln 19 = -2.944\).</li>
+        <li><b>(b)</b> A lower-tail test rejects when \(y_{\rm obs} \le y_{\rm RR}\). Here \(y_{\rm obs}\) is above it, so we <span class="okc">fail to reject \(H_0\)</span>.</li>
+        <li><b>(c) Farther.</b> Two-tailed puts only \(\alpha/2 = 0.025\) in the lower tail: \(1 + e^{-y} = 40\), so \(y = -\ln 39 = -3.664\), which is farther from 0 than \(-2.944\).</li>
+      </ol>
+      <p class="answer">(a) \(y_{\rm RR} = -\ln 19 = -2.944\). (b) Fail to reject. (c) Farther (\(-\ln 39 = -3.664\)).</p>
+      <p>Review: <a href="#m4">Module 4</a></p>
+    </div></details>
+  </div>
+
+  <div class="exam-q"><span class="pts">3 pts</span>
+    <p class="sheetref">MPSI Ch. 1 · Exercise 48 · from the practice handout</p>
+    <p><b>Q5.</b> You sample one datum from the c.d.f. \(F_X(x) = 1 - e^{-(x-2)/\theta}\) for \(x \ge 2\) and \(\theta &gt; 0\), with \(\mathbb{E}[X] = \theta + 2\). The statistic is \(Y = X\).</p>
+    <p>(a) [1] Find the rejection-region boundary for the upper-tail test \(H_0: \theta = \theta_0 = 1\) versus \(H_a: \theta &gt; \theta_0\), with level \(\alpha\). (b) [1] If \(y_{\rm obs} &lt; y_{\rm RR}\), what do you conclude? (c) [1] Write the lower boundary for the two-tail test \(H_a: \theta \ne 1\).</p>
+    <details><summary>Solution</summary><div class="sol">
+      <ol class="steps">
+        <li><b>What this is.</b> An exponential with mean \(\theta\), shifted right by 2. \(\mathbb{E}[Y] = \theta + 2\) increases with \(\theta\), so the tables apply as printed.</li>
+        <li><b>(a)</b> Upper-tail row: solve \(F_Y(y; 1) = 1 - \alpha\). \(1 - e^{-(y-2)} = 1 - \alpha\), so \(e^{-(y-2)} = \alpha\), \(-(y-2) = \ln\alpha\), and \(y_{\rm RR} = 2 - \ln\alpha\). (At \(\alpha = 0.05\): \(2 + 2.996 = 4.996\).)</li>
+        <li><b>(b)</b> An upper-tail test rejects only when \(y_{\rm obs} \ge y_{\rm RR}\). Below it, we <span class="okc">fail to reject \(H_0\)</span>: \(\theta = 1\) is plausible.</li>
+        <li><b>(c)</b> The two-tail lower boundary solves \(F_Y(y; 1) = \alpha/2\): \(e^{-(y-2)} = 1 - \alpha/2\), so \(y = 2 - \ln(1 - \alpha/2)\). (At \(\alpha = 0.05\): \(2 + 0.0253 = 2.025\).)</li>
+      </ol>
+      <p class="answer">(a) \(y_{\rm RR} = 2 - \ln\alpha\). (b) Fail to reject. (c) \(2 - \ln(1 - \alpha/2)\).</p>
       <p>Review: <a href="#m4">Module 4</a></p>
     </div></details>
   </div>
 
   <h3>Part B · Distribution tests (13 pts)</h3>
-
   <div class="exam-q"><span class="pts">4 pts</span>
-    <p><b>Q5.</b> You test whether \(n = 5\) data come from an exponential distribution with \(\theta = 2\), using a one-sample KS test. The table gives the data, the empirical c.d.f. \(F_{X_n}(x)\) at each datum, and the null c.d.f. \(F_X(x) = 1 - e^{-x/2}\).</p>
+    <p><b>Q6.</b> You test whether \(n = 5\) data come from an exponential distribution with \(\theta = 2\), using a one-sample KS test. The table gives the data, the empirical c.d.f. \(F_{X_n}(x)\) at each datum, and the null c.d.f. \(F_X(x) = 1 - e^{-x/2}\).</p>
     <div class="table-wrap"><table class="grid">
       <thead><tr><th>\(x\)</th><th>0.3</th><th>0.8</th><th>1.1</th><th>2.9</th><th>5.0</th></tr></thead>
       <tbody>
@@ -6293,7 +6305,7 @@ svg .t-muted{fill:var(--muted)} svg .t-math{font-family:"Times New Roman",Times,
   </div>
 
   <div class="exam-q"><span class="pts">3 pts</span>
-    <p><b>Q6.</b> (a) Before running a t test, you want to check whether 12 measurements are plausibly normal. Should you use the KS test or the Shapiro-Wilk test? Why?</p>
+    <p><b>Q7.</b> (a) Before running a t test, you want to check whether 12 measurements are plausibly normal. Should you use the KS test or the Shapiro-Wilk test? Why?</p>
     <p>(b) A KS test of normality gives p = 0.42. A classmate writes "the data are normal." What is wrong with that?</p>
     <p>(c) Of the KS, Shapiro-Wilk and Mann-Whitney U tests, which can properly be used with discrete data?</p>
     <details><summary>Solution</summary><div class="sol">
@@ -6308,7 +6320,7 @@ svg .t-muted{fill:var(--muted)} svg .t-math{font-family:"Times New Roman",Times,
   </div>
 
   <div class="exam-q"><span class="pts">6 pts</span>
-    <p><b>Q7.</b> Wear depth (μm) after a test cycle was measured on parts with an old coating (group A) and a new coating (group B). The parts are all different.</p>
+    <p><b>Q8.</b> Wear depth (μm) after a test cycle was measured on parts with an old coating (group A) and a new coating (group B). The parts are all different.</p>
     <p>Group A (\(n_1 = 4\)): 3.1, 4.6, 2.8, 5.2 &#160;&#160; Group B (\(n_2 = 5\)): 1.9, 2.4, 3.5, 2.2, 1.7</p>
     <p>(a) [1] State \(H_0\) and \(H_a\) for a Mann-Whitney U test. (b) [4] Compute \(R_A\), \(R_B\), \(U_A\), \(U_B\) and the test statistic \(U\). (c) [1] For large samples, what is the approximate distribution of \(U\)?</p>
     <details><summary>Solution</summary><div class="sol">
@@ -6337,9 +6349,8 @@ svg .t-muted{fill:var(--muted)} svg .t-math{font-family:"Times New Roman",Times,
   </div>
 
   <h3>Part C · Two-sample t tests (6 pts)</h3>
-
   <div class="exam-q"><span class="pts">6 pts</span>
-    <p><b>Q8.</b> (a) [2] For each study, should you use a paired or an unpaired t test? (i) Six welders each weld one joint with rod type A and one joint with rod type B, and the joint strengths are compared. (ii) Four shafts from supplier X and five shafts from supplier Y are measured for diameter.</p>
+    <p><b>Q9.</b> (a) [2] For each study, should you use a paired or an unpaired t test? (i) Six welders each weld one joint with rod type A and one joint with rod type B, and the joint strengths are compared. (ii) Four shafts from supplier X and five shafts from supplier Y are measured for diameter.</p>
     <p>(b) [3] For study (ii): \(\bar x = 12.0\), \(s_X = 2.0\), \(n_X = 4\); \(\bar y = 10.5\), \(s_Y = 1.0\), \(n_Y = 5\). Compute \(S_\Delta\), the Welch statistic \(T\), and \(\nu\).</p>
     <p>(c) [1] Under \(H_0: \mu_X = \mu_Y\), what distribution does \(T\) follow? List the test's assumptions.</p>
     <details><summary>Solution</summary><div class="sol">
@@ -6356,42 +6367,73 @@ svg .t-muted{fill:var(--muted)} svg .t-math{font-family:"Times New Roman",Times,
     </div></details>
   </div>
 
-  <h3>Part D · Categorical data (17 pts)</h3>
-
+  <h3>Part D · Categorical data (21 pts)</h3>
   <div class="exam-q"><span class="pts">3 pts</span>
-    <p><b>Q9.</b> (a) [2] Which of these are multinomial experiments? (i) Roll a die 60 times and count how often each face appears. (ii) Measure the diameter of 30 bearings. (iii) Inspect exactly 200 circuit boards and classify each as pass, rework or scrap. (iv) Keep testing parts until the 5th failure, recording the failure type each time.</p>
-    <p>(b) [1] The chi-square goodness-of-fit test approximates which exact test, and when is the approximation considered valid?</p>
+    <p class="sheetref">MPSI Ch. 3 · Exercise 32 · from the practice handout</p>
+    <p><b>Q10.</b> Twenty-one students walk into a hallway with three rooms off it. A researcher expects each student to pick a room at random. She observes 10 in Room A, 5 in Room B and 6 in Room C, and tests \(H_0: p_1 = p_2 = p_3\) at \(\alpha = 0.1\).</p>
+    <p>(a) [1] Choose an appropriate test and compute its statistic (a number). (b) [1] How many degrees of freedom? (c) [1] The rejection-region boundary is 4.61. Do you reject?</p>
     <details><summary>Solution</summary><div class="sol">
       <ol class="steps">
-        <li><b>(i) Yes.</b> \(k = 60\) trials fixed in advance, \(m = 6\) outcomes, independent trials, constant probabilities.</li>
-        <li><b>(ii) No.</b> Continuous measurements, no categories.</li>
-        <li><b>(iii) Yes.</b> \(k = 200\) fixed, \(m = 3\) categories.</li>
-        <li><b>(iv) No.</b> The number of trials is not fixed in advance; it depends on when the 5th failure happens.</li>
-        <li><b>(b)</b> The exact multinomial test. The chi-square version is valid when every expected count \(kp_{i,0}\) is at least 5.</li>
+        <li><b>(a) Test.</b> Chi-square goodness of fit: one sample of \(k = 21\) students, \(m = 3\) categories, each with a hypothesized probability of 1/3.</li>
+        <li><b>Expected counts.</b> \(kp_{i,0} = 21/3 = 7\) for each room. All are at least 5.</li>
+        <li><b>Statistic.</b> \(X^2 = \frac{(10-7)^2}{7} + \frac{(5-7)^2}{7} + \frac{(6-7)^2}{7} = \frac{9 + 4 + 1}{7} = 2\).</li>
+        <li><b>(b)</b> \(m - 1 = 2\). Three counts, but they must add to 21, so only two are free.</li>
+        <li><b>(c)</b> A chi-square test rejects for large values. \(2 &lt; 4.61\), so we <span class="okc">fail to reject \(H_0\)</span>: random room choice is plausible.</li>
       </ol>
-      <p class="answer">(i) and (iii). Exact multinomial test; all expected counts ≥ 5.</p>
+      <p class="answer">\(X^2 = 2\), df = 2, fail to reject.</p>
       <p>Review: <a href="#m8">Module 8</a></p>
     </div></details>
   </div>
 
-  <div class="exam-q"><span class="pts">5 pts</span>
-    <p><b>Q10.</b> A supplier claims its defects are 50% cosmetic, 30% dimensional and 20% electrical. You classify 80 defects and find 34 cosmetic, 30 dimensional and 16 electrical.</p>
-    <p>(a) [3] Compute the expected counts, the chi-square goodness-of-fit statistic \(X^2\), and its degrees of freedom. (b) [2] The p-value is 0.301. State your conclusion at \(\alpha = 0.05\).</p>
+  <div class="exam-q"><span class="pts">4 pts</span>
+    <p class="sheetref">MPSI Ch. 3 · Exercise 35 · from the practice handout</p>
+    <p><b>Q11.</b> You take 180 shots at a 3-by-3 square target with a 1-by-1 square bullseye inside it. 30 shots hit the bullseye and the other 150 hit the target outside it. You test the null hypothesis that the shots land at random locations on the target.</p>
+    <p>(a) [1] How many shots are expected inside and outside the bullseye under \(H_0\)? (b) [1] Compute an appropriate test statistic. (c) [1] Name its sampling distribution under \(H_0\), with parameters. (d) [1] The rejection-region boundary is 3.841. Reject or fail to reject?</p>
     <details><summary>Solution</summary><div class="sol">
       <ol class="steps">
-        <li><b>Identify.</b> \(k = 80\) (the TOTAL count), \(m = 3\) categories, \(p_0 = (0.5, 0.3, 0.2)\).</li>
-        <li><b>Expected counts.</b> \(kp_{i,0} = 40, 24, 16\). All are at least 5, so the approximation is valid.</li>
-        <li><b>Statistic.</b> \(X^2 = \frac{(34-40)^2}{40} + \frac{(30-24)^2}{24} + \frac{(16-16)^2}{16} = 0.9 + 1.5 + 0 = 2.4\).</li>
-        <li><b>df.</b> \(m - 1 = 2\), so \(X^2 \sim \chi^2(2)\) under \(H_0\).</li>
-        <li><b>(b)</b> Since \(0.301 &gt; 0.05\), we fail to reject \(H_0\) and conclude that the claimed defect mix is plausible.</li>
+        <li><b>(a) Null probabilities from areas.</b> Random location means probability is proportional to area. Bullseye area 1 out of a total of 9: \(p_{\rm in} = 1/9\), \(p_{\rm out} = 8/9\). With \(k = 180\): expected inside \(= 180/9 = 20\), outside \(= 160\).</li>
+        <li><b>(b) Goodness of fit.</b> \(X^2 = \frac{(30-20)^2}{20} + \frac{(150-160)^2}{160} = 5 + 0.625 = 5.625\).</li>
+        <li><b>(c)</b> \(X^2 \sim \chi^2(1)\): chi-square with \(m - 1 = 2 - 1 = 1\) degree of freedom.</li>
+        <li><b>(d)</b> \(5.625 &gt; 3.841\), so we <span class="rj">reject \(H_0\)</span>: there is evidence the shots are not random (more bullseyes than chance gives).</li>
       </ol>
-      <p class="answer">Expected 40, 24, 16; \(X^2 = 2.4\), df = 2; fail to reject.</p>
+      <p class="answer">Expected 20 in, 160 out; \(X^2 = 5.625\); \(\chi^2(1)\); reject.</p>
+      <p>Review: <a href="#m8">Module 8</a></p>
+    </div></details>
+  </div>
+
+  <div class="exam-q"><span class="pts">2 pts</span>
+    <p class="sheetref">MPSI Ch. 3 · Exercise 42 (a, d) · from the practice handout</p>
+    <p><b>Q12.</b> An experiment of 24 trials puts 8, 8 and 8 counts in three bins. Beforehand you expected one quarter of the counts in bin 1, one quarter in bin 2 and one half in bin 3. You test this at \(\alpha = 0.05\).</p>
+    <p>(a) [1] What is the test statistic? (d) [1] The observed data are sampled from what discrete family of distributions?</p>
+    <details><summary>Solution</summary><div class="sol">
+      <ol class="steps">
+        <li><b>(a) Expected counts.</b> \(k = 24\), \(p_0 = (1/4, 1/4, 1/2)\), so \(kp_{i,0} = 6, 6, 12\). All are at least 5.</li>
+        <li><b>Statistic.</b> \(X^2 = \frac{(8-6)^2}{6} + \frac{(8-6)^2}{6} + \frac{(8-12)^2}{12} = \frac{4}{6} + \frac{4}{6} + \frac{16}{12} = \frac{8}{3} = 2.67\).</li>
+        <li><b>(d) Multinomial.</b> A fixed number of trials (24), each landing in one of 3 bins, with the same bin probabilities every trial.</li>
+        <li><b>Going further.</b> Parts (b) and (c) ask for software calls, so they are skipped. By hand: df \(= m - 1 = 2\); the boundary at \(\alpha = 0.05\) is 5.99, so \(8/3\) means fail to reject.</li>
+      </ol>
+      <p class="answer">(a) \(X^2 = 8/3\). (d) Multinomial.</p>
+      <p>Review: <a href="#m8">Module 8</a></p>
+    </div></details>
+  </div>
+
+  <div class="exam-q"><span class="pts">3 pts</span>
+    <p class="sheetref">MPSI Ch. 3 · Exercise 33 (a to c) · from the practice handout</p>
+    <p><b>Q13.</b> A political scientist prints 100 copies each of four climate-change pamphlets (environmental, economic, socio-cultural, origins) and hands them out at random. Each reader answers one question: should the government spend more than, as much as, or less than it does now on fighting climate change? She plans a chi-square test of whether the answer is related to which pamphlet was read.</p>
+    <p>(a) [1] Goodness of fit, independence, or homogeneity? (b) [1] The statistic is \(X^2 = 24.3\). How many terms were summed to get it? (c) [1] It follows a chi-square distribution with how many degrees of freedom?</p>
+    <details><summary>Solution</summary><div class="sol">
+      <ol class="steps">
+        <li><b>(a) Homogeneity.</b> The researcher fixed the group sizes in advance (100 readers per pamphlet). The question is whether the answer distribution is the same (homogeneous) across the four groups. Fixed group sizes mean homogeneity; one sample asked two questions would mean independence.</li>
+        <li><b>(b) 12 terms.</b> One \((O - E)^2/E\) term per cell of the 4 × 3 table (4 pamphlets × 3 answers).</li>
+        <li><b>(c) 6.</b> \((r-1)(c-1) = (4-1)(3-1) = 6\).</li>
+      </ol>
+      <p class="answer">Homogeneity; 12 terms; 6 degrees of freedom.</p>
       <p>Review: <a href="#m8">Module 8</a></p>
     </div></details>
   </div>
 
   <div class="exam-q"><span class="pts">6 pts</span>
-    <p><b>Q11.</b> A plant randomly selects 150 employees and asks each one two questions: which department they work in and which shift they prefer.</p>
+    <p><b>Q14.</b> A plant randomly selects 150 employees and asks each one two questions: which department they work in and which shift they prefer.</p>
     <div class="table-wrap"><table class="grid">
       <thead><tr><th></th><th>Day</th><th>Night</th><th>Swing</th><th>Total</th></tr></thead>
       <tbody>
@@ -6428,7 +6470,7 @@ svg .t-muted{fill:var(--muted)} svg .t-math{font-family:"Times New Roman",Times,
   </div>
 
   <div class="exam-q"><span class="pts">3 pts</span>
-    <p><b>Q12.</b> Which test fits each design? (a) 50 parts from line 1 and 50 parts from line 2 are chosen in advance and each is classified pass or fail. (b) The same, but with three lines of 50 parts each. (c) Why is Fisher's exact test not the right exact test for (a)?</p>
+    <p><b>Q15.</b> Which test fits each design? (a) 50 parts from line 1 and 50 parts from line 2 are chosen in advance and each is classified pass or fail. (b) The same, but with three lines of 50 parts each. (c) Why is Fisher's exact test not the right exact test for (a)?</p>
     <details><summary>Solution</summary><div class="sol">
       <ol class="steps">
         <li><b>(a) Barnard's exact test.</b> A 2×2 table (2 lines × pass/fail) with one margin, the line sample sizes, fixed by design. It is exact, with no approximation. (A chi-square test of homogeneity would approximate it.)</li>
@@ -6441,26 +6483,39 @@ svg .t-muted{fill:var(--muted)} svg .t-math{font-family:"Times New Roman",Times,
   </div>
 
   <h3>Part E · Confidence intervals (10 pts)</h3>
-
-  <div class="exam-q"><span class="pts">6 pts</span>
-    <p><b>Q13.</b> You observe one datum \(x_{\rm obs} = 5\) from an exponential distribution with c.d.f. \(F_X(x;\theta) = 1 - e^{-x/\theta}\).</p>
-    <p>(a) [4] Construct a 90% two-sided confidence interval for \(\theta\). (b) [1] Construct a 95% one-sided lower bound for \(\theta\). (c) [1] Using (a), would a two-tailed test of \(H_0: \theta = 1\) at \(\alpha = 0.10\) reject?</p>
+  <div class="exam-q"><span class="pts">4 pts</span>
+    <p class="sheetref">MPSI Ch. 1 · Exercise 45 · from the practice handout</p>
+    <p><b>Q16.</b> You sample one datum \(X = x_{\rm obs}\) from the p.d.f. \(f_X(x) = a(1+x)^{-a-1}\), for \(x \ge 0\) and \(a &gt; 1\). Let \(Y = X\); then \(\mathbb{E}[Y] = 1/(a-1)\).</p>
+    <p>(a) [2] Find \(F_Y(y)\). (b) [2] With \(\alpha = 0.05\), derive a one-sided lower bound on \(a\).</p>
     <details><summary>Solution</summary><div class="sol">
       <ol class="steps">
-        <li><b>Identify.</b> One datum, so \(Y = X\), \(y_{\rm obs} = 5\). 90% two-sided means \(\alpha = 0.10\): \(q = 1 - \alpha/2 = 0.95\) for the lower bound and \(q = \alpha/2 = 0.05\) for the upper bound.</li>
-        <li><b>Lower bound.</b> \(1 - e^{-5/\theta} = 0.95\), so \(e^{-5/\theta} = 0.05\), \(-5/\theta = \ln 0.05\), \(\widehat\theta_L = -5/\ln 0.05 = 5/\ln 20 = 1.67\).</li>
-        <li><b>Upper bound.</b> \(1 - e^{-5/\theta} = 0.05\), so \(e^{-5/\theta} = 0.95\), \(\widehat\theta_U = -5/\ln 0.95 = 97.5\).</li>
-        <li><b>(a)</b> The 90% CI is \([1.67, 97.5]\). One datum cannot pin \(\theta\) down, so the interval is wide.</li>
-        <li><b>(b)</b> One-sided lower: \(q = 1 - \alpha = 0.95\). That is the same equation as the lower bound in (a), so \(\widehat\theta_L = 1.67\); the bound is \([1.67, \infty)\).</li>
-        <li><b>(c)</b> Yes. \(\theta = 1\) lies outside \([1.67, 97.5]\), and a two-tailed level-0.10 test rejects exactly the \(\theta_0\) values outside the 90% interval. (Check: \(p = 2e^{-5} = 0.013 &lt; 0.10\).)</li>
+        <li><b>(a) Integrate the p.d.f.</b> \(F_Y(y) = \int_0^y a(1+v)^{-a-1}\,dv = \big[-(1+v)^{-a}\big]_0^y = 1 - (1+y)^{-a}\) for \(y \ge 0\). Check: it is 0 at \(y = 0\) and goes to 1 as \(y \to \infty\).</li>
+        <li><b>Direction check (the twist).</b> \(\mathbb{E}[Y] = 1/(a-1)\) gets <b>smaller</b> as \(a\) grows, so the q table's labels swap (<a href="#m5">Module 5</a>, section 4). A one-sided lower bound normally uses \(q = 1 - \alpha\); here it uses \(q = \alpha\). The handout says this reversal will not be needed on the exam.</li>
+        <li><b>Why \(q = \alpha\).</b> At the lower bound, \(a\) is so small that the data tend to be large, so \(y_{\rm obs}\) looks unusually <b>small</b>: it sits low in the c.d.f., at \(F = \alpha\).</li>
+        <li><b>(b) Solve.</b> \(1 - (1 + y_{\rm obs})^{-a} = \alpha\), so \((1 + y_{\rm obs})^{-a} = 1 - \alpha\). Take logs: \(-a\ln(1 + y_{\rm obs}) = \ln(1-\alpha)\). So \(\hat a_L = \dfrac{-\ln(1-\alpha)}{\ln(1 + y_{\rm obs})} = \dfrac{0.0513}{\ln(1 + y_{\rm obs})}\).</li>
       </ol>
-      <p class="answer">(a) \([1.67, 97.5]\); (b) \([1.67, \infty)\); (c) reject.</p>
+      <p class="answer">(a) \(F_Y(y) = 1 - (1+y)^{-a}\). (b) \(\hat a_L = -\ln(0.95)/\ln(1 + y_{\rm obs}) = 0.0513/\ln(1 + y_{\rm obs})\).</p>
+      <p>Review: <a href="#m5">Module 5</a> (and <a href="#m2">Module 2</a> for p.d.f. to c.d.f.)</p>
+    </div></details>
+  </div>
+
+  <div class="exam-q"><span class="pts">2 pts</span>
+    <p class="sheetref">MPSI Ch. 1 · Exercise 47 · from the practice handout</p>
+    <p><b>Q17.</b> You sample one datum from the c.d.f. \(F_X(x) = e^{-e^{-(x-\theta)}}\), for real \(x\) and \(\theta\). The statistic is \(Y = X\), with \(\mathbb{E}[Y] = \theta + \gamma\) (\(\gamma\) a constant).</p>
+    <p>(a) [1] Write a one-sided \(100(1-\alpha)\)% upper bound for \(\theta\). (b) [1] Write the lower bound of a two-sided \(100(1-\alpha)\)% interval for \(\theta\). No work is needed for (b).</p>
+    <details><summary>Solution</summary><div class="sol">
+      <ol class="steps">
+        <li><b>Direction.</b> \(\mathbb{E}[Y] = \theta + \gamma\) increases with \(\theta\), so the q table applies as printed. One-sided upper bound: \(q = \alpha\).</li>
+        <li><b>(a) Solve \(F_Y(y_{\rm obs}; \theta) = \alpha\) for \(\theta\).</b> \(e^{-e^{-(y_{\rm obs}-\theta)}} = \alpha\). Take logs: \(-e^{-(y_{\rm obs}-\theta)} = \ln\alpha\), so \(e^{-(y_{\rm obs}-\theta)} = -\ln\alpha\) (positive, since \(\ln\alpha &lt; 0\)). Take logs again: \(\theta - y_{\rm obs} = \ln(-\ln\alpha)\), so \(\hat\theta_U = y_{\rm obs} + \ln(-\ln\alpha)\). (At \(\alpha = 0.05\): \(y_{\rm obs} + 1.097\).)</li>
+        <li><b>(b) Swap in the two-sided lower q.</b> Two-sided lower bound uses \(q = 1 - \alpha/2\), and the algebra is identical with \(\alpha\) replaced: \(\hat\theta_L = y_{\rm obs} + \ln\!\big(-\ln(1 - \alpha/2)\big)\). (At \(\alpha = 0.05\): \(y_{\rm obs} - 3.676\).)</li>
+      </ol>
+      <p class="answer">(a) \(\hat\theta_U = y_{\rm obs} + \ln(-\ln\alpha)\). (b) \(\hat\theta_L = y_{\rm obs} + \ln(-\ln(1-\alpha/2))\).</p>
       <p>Review: <a href="#m5">Module 5</a></p>
     </div></details>
   </div>
 
   <div class="exam-q"><span class="pts">4 pts</span>
-    <p><b>Q14.</b> From a sample of bottles, a 95% confidence interval for the mean fill volume \(\mu\) is [498.2, 501.6] mL. True or false?</p>
+    <p><b>Q18.</b> From a sample of bottles, a 95% confidence interval for the mean fill volume \(\mu\) is [498.2, 501.6] mL. True or false?</p>
     <p>(a) There is a 95% probability that \(\mu\) is between 498.2 and 501.6 mL. (b) If the sampling were repeated many times and an interval built the same way each time, about 95% of those intervals would contain \(\mu\). (c) About 95% of individual bottles contain between 498.2 and 501.6 mL. (d) A two-tailed test of \(H_0: \mu = 500\) at \(\alpha = 0.05\) on the same data would fail to reject.</p>
     <details><summary>Solution</summary><div class="sol">
       <ol class="steps">
@@ -6474,24 +6529,9 @@ svg .t-muted{fill:var(--muted)} svg .t-math{font-family:"Times New Roman",Times,
     </div></details>
   </div>
 
-  <h3>Part F · Quality control (32 pts)</h3>
-
-  <div class="exam-q"><span class="pts">3 pts</span>
-    <p><b>Q15.</b> (a) [1] What is a rational subgroup? (b) [2] For each process, say whether the data are variables or attributes, and name the control chart(s) to use: (i) shaft diameter, 5 shafts measured every hour; (ii) number of scratches on each painted panel; (iii) number of defective chips among 400 tested each shift.</p>
-    <details><summary>Solution</summary><div class="sol">
-      <ol class="steps">
-        <li><b>(a)</b> A small batch of items sampled together at one time (either items made close to the sampling time, or items drawn at random from production since the last sample). Each subgroup gives one plotted point.</li>
-        <li><b>(i)</b> Variables (continuous measurements): \(\overline X\) chart and S chart.</li>
-        <li><b>(ii)</b> Attributes (counts of flaws per unit): c chart.</li>
-        <li><b>(iii)</b> Attributes (proportion defective in a sample of \(k = 400\)): p chart.</li>
-      </ol>
-      <p class="answer">1 pt for (a), 2 pts for (b) (lose 1 per wrong chart).</p>
-      <p>Review: <a href="#m9">Module 9</a></p>
-    </div></details>
-  </div>
-
+  <h3>Part F · Quality control (29 pts)</h3>
   <div class="exam-q"><span class="pts">6 pts</span>
-    <p><b>Q16.</b> A process is monitored with \(m = 20\) rational subgroups of size \(n = 4\). The summaries are \(\sum_{i=1}^{20}\overline X_i = 401.0\) and \(\sum_{i=1}^{20} S_i = 24.0\).</p>
+    <p><b>Q19.</b> A process is monitored with \(m = 20\) rational subgroups of size \(n = 4\). The summaries are \(\sum_{i=1}^{20}\overline X_i = 401.0\) and \(\sum_{i=1}^{20} S_i = 24.0\).</p>
     <p>(a) [2] Compute \(c_4\) using the Gamma values on the formula sheet. (b) [2] Compute the 3σ limits for the \(\overline X\) chart. (c) [2] Compute the 3σ limits for the S chart.</p>
     <details><summary>Solution</summary><div class="sol">
       <ol class="steps">
@@ -6507,7 +6547,7 @@ svg .t-muted{fill:var(--muted)} svg .t-math{font-family:"Times New Roman",Times,
   </div>
 
   <div class="exam-q"><span class="pts">5 pts</span>
-    <p><b>Q17.</b> (a) [3] Each shift, 500 wafers are inspected; over 30 shifts, 600 wafers were defective in total. Compute the 3σ limits of the p chart. What does \(k\) stand for in the p-chart formula here? (b) [2] Over 25 painted panels, 400 flaws were counted in total. Compute the c-chart limits. A new panel has 31 flaws. Is the process in control?</p>
+    <p><b>Q20.</b> (a) [3] Each shift, 500 wafers are inspected; over 30 shifts, 600 wafers were defective in total. Compute the 3σ limits of the p chart. What does \(k\) stand for in the p-chart formula here? (b) [2] Over 25 painted panels, 400 flaws were counted in total. Compute the c-chart limits. A new panel has 31 flaws. Is the process in control?</p>
     <details><summary>Solution</summary><div class="sol">
       <ol class="steps">
         <li><b>(a)</b> \(k = 500\) = number of items inspected in each sample (not the number of samples, and not a total). \(\overline p = 600/(30 \times 500) = 0.04\).
@@ -6522,7 +6562,7 @@ svg .t-muted{fill:var(--muted)} svg .t-math{font-family:"Times New Roman",Times,
   </div>
 
   <div class="exam-q"><span class="pts">5 pts</span>
-    <p><b>Q18.</b> An \(\overline X\) chart has center line 50 and \(\sigma = 2\) (the SD of \(\overline X\)), so the 1σ lines are 48 and 52, the 2σ lines 46 and 54, and the 3σ limits 44 and 56. The first 16 subgroup means are:</p>
+    <p><b>Q21.</b> An \(\overline X\) chart has center line 50 and \(\sigma = 2\) (the SD of \(\overline X\)), so the 1σ lines are 48 and 52, the 2σ lines 46 and 54, and the 3σ limits 44 and 56. The first 16 subgroup means are:</p>
     <div class="table-wrap"><table class="grid">
       <thead><tr><th>Subgroup</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th></tr></thead>
       <tbody><tr><td>\(\overline X\)</td><td>50.6</td><td>54.6</td><td>49.2</td><td>51.0</td><td>52.4</td><td>51.4</td><td>52.8</td><td>53.1</td></tr></tbody>
@@ -6552,7 +6592,7 @@ svg .t-muted{fill:var(--muted)} svg .t-math{font-family:"Times New Roman",Times,
   </div>
 
   <div class="exam-q"><span class="pts">5 pts</span>
-    <p><b>Q19.</b> A CUSUM chart uses \(\widehat\mu = 10.0\) and \(\widehat\sigma = 0.4\) (the SD of \(\overline X\)), with \(k = 1/2\) and \(h = 4\). The first five subgroup means are 10.3, 10.6, 10.1, 10.9, 10.8.</p>
+    <p><b>Q22.</b> A CUSUM chart uses \(\widehat\mu = 10.0\) and \(\widehat\sigma = 0.4\) (the SD of \(\overline X\)), with \(k = 1/2\) and \(h = 4\). The first five subgroup means are 10.3, 10.6, 10.1, 10.9, 10.8.</p>
     <p>(a) [4] Compute \(\mathrm{SH}_i\) and \(\mathrm{SL}_i\) for \(i = 1\) to 5. At which subgroup is the process first out of control? (b) [1] Would an \(\overline X\) chart with 3σ limits have flagged any of these five points?</p>
     <details><summary>Solution</summary><div class="sol">
       <ol class="steps">
@@ -6579,7 +6619,7 @@ svg .t-muted{fill:var(--muted)} svg .t-math{font-family:"Times New Roman",Times,
   </div>
 
   <div class="exam-q"><span class="pts">3 pts</span>
-    <p><b>Q20.</b> (a) Define the average run length (ARL). (b) For an in-control process with 3σ limits, the ARL is about 370. What is every signal in that situation, and which hypothesis-testing error does it correspond to? (c) If the process mean shifts up by 1σ, does the ARL increase or decrease? What do we call it when the chart misses the shift?</p>
+    <p><b>Q23.</b> (a) Define the average run length (ARL). (b) For an in-control process with 3σ limits, the ARL is about 370. What is every signal in that situation, and which hypothesis-testing error does it correspond to? (c) If the process mean shifts up by 1σ, does the ARL increase or decrease? What do we call it when the chart misses the shift?</p>
     <details><summary>Solution</summary><div class="sol">
       <ol class="steps">
         <li><b>(a)</b> The average number of subgroups plotted until (and including) the first out-of-control signal. It is \(1/P(\text{signal})\) for a single point.</li>
@@ -6592,7 +6632,7 @@ svg .t-muted{fill:var(--muted)} svg .t-math{font-family:"Times New Roman",Times,
   </div>
 
   <div class="exam-q"><span class="pts">5 pts</span>
-    <p><b>Q21.</b> A part must measure between 4.0 and 5.0 mm. An in-control \(\overline X\) chart with subgroups of size \(n = 5\) gives \(\overline{\overline X} = 4.62\) and \(\overline S = 0.094\). (Use \(c_4 = 0.9400\) for \(n = 5\).)</p>
+    <p><b>Q24.</b> A part must measure between 4.0 and 5.0 mm. An in-control \(\overline X\) chart with subgroups of size \(n = 5\) gives \(\overline{\overline X} = 4.62\) and \(\overline S = 0.094\). (Use \(c_4 = 0.9400\) for \(n = 5\).)</p>
     <p>(a) [1] Estimate \(\sigma\) for individual parts. (b) [2] Compute \(C_p\) and \(C_{pk}\). (c) [1] Is the process minimally capable? Is it of six-sigma quality? (d) [1] Without reducing variation, what single change would raise \(C_{pk}\), and to what value?</p>
     <details><summary>Solution</summary><div class="sol">
       <ol class="steps">
@@ -6607,19 +6647,20 @@ svg .t-muted{fill:var(--muted)} svg .t-math{font-family:"Times New Roman",Times,
     </div></details>
   </div>
 
+
   <h3>Scoring note</h3>
   <p>Add up your points. Partial credit: give yourself the points for each part you got right, and half the points for a part where the method was right but the arithmetic slipped. Then use the table to decide what to reread.</p>
   <div class="table-wrap"><table class="grid">
     <thead><tr><th>Question</th><th>Points</th><th>Topic</th><th>If you lost points, review</th></tr></thead>
     <tbody>
-      <tr><td>Q1, Q2</td><td>9</td><td>Definitions, conclusions</td><td><a href="#m3">Module 3</a></td></tr>
-      <tr><td>Q3, Q4</td><td>13</td><td>Power concepts; exponential p-value, rejection region, power</td><td><a href="#m4">Module 4</a> (and <a href="#m2">Module 2</a> for the inverse c.d.f.)</td></tr>
-      <tr><td>Q5, Q6, Q7</td><td>13</td><td>KS \(D_n\), KS vs Shapiro, Mann-Whitney U</td><td><a href="#m6">Module 6</a></td></tr>
-      <tr><td>Q8</td><td>6</td><td>Paired vs unpaired, Welch</td><td><a href="#m7">Module 7</a></td></tr>
-      <tr><td>Q9, Q10, Q11, Q12</td><td>17</td><td>Multinomial, G.o.F., contingency tables, Barnard</td><td><a href="#m8">Module 8</a></td></tr>
-      <tr><td>Q13, Q14</td><td>10</td><td>Exponential CI, interpretation, duality</td><td><a href="#m5">Module 5</a></td></tr>
-      <tr><td>Q15, Q16, Q17</td><td>14</td><td>Jargon, \(\overline X\)/S/p/c limits, \(c_4\)</td><td><a href="#m9">Module 9</a></td></tr>
-      <tr><td>Q18 to Q21</td><td>18</td><td>Western Electric, CUSUM, ARL, \(C_p\)/\(C_{pk}\)</td><td><a href="#m10">Module 10</a></td></tr>
+      <tr><td>Q1, Q2</td><td>10</td><td>Definitions; power concepts</td><td><a href="#m3">Module 3</a>, <a href="#m4">Module 4</a></td></tr>
+      <tr><td>Q3, Q4, Q5</td><td>11</td><td>One-datum tests: p-value, rejection region, power (MPSI)</td><td><a href="#m4">Module 4</a> (and <a href="#m2">Module 2</a> for the inverse c.d.f.)</td></tr>
+      <tr><td>Q6, Q7, Q8</td><td>13</td><td>KS \(D_n\), KS vs Shapiro, Mann-Whitney U</td><td><a href="#m6">Module 6</a></td></tr>
+      <tr><td>Q9</td><td>6</td><td>Paired vs unpaired, Welch</td><td><a href="#m7">Module 7</a></td></tr>
+      <tr><td>Q10 to Q15</td><td>21</td><td>Goodness of fit (MPSI), homogeneity, independence, Barnard</td><td><a href="#m8">Module 8</a></td></tr>
+      <tr><td>Q16, Q17, Q18</td><td>10</td><td>One-datum CIs (MPSI), interpretation</td><td><a href="#m5">Module 5</a></td></tr>
+      <tr><td>Q19, Q20</td><td>11</td><td>\(\overline X\)/S/p/c limits, \(c_4\)</td><td><a href="#m9">Module 9</a></td></tr>
+      <tr><td>Q21 to Q24</td><td>18</td><td>Western Electric, CUSUM, ARL, \(C_p\)/\(C_{pk}\)</td><td><a href="#m10">Module 10</a></td></tr>
       <tr><td><b>Total</b></td><td><b>100</b></td><td></td><td></td></tr>
     </tbody>
   </table></div>
